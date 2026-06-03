@@ -72,6 +72,17 @@ public class StudentMarkSystem{
         double avgmarks = (double) totalmarks / n;
         System.out.printf("\nTOTAL MARKS : %d%n", totalmarks);
         System.out.printf("AVERAGE MARKS : %.2f%n", avgmarks);
+        int pass = 0;
+        int fail = 0;
+        for(int i =0; i<n; i++){
+            if(grades[i] == 'A' || grades[i] == 'B' || grades[i] == 'C' || grades[i] == 'D'){
+                pass++;
+            }else{
+                fail++;
+            }
+        }
+        System.out.printf("\nTOTAL PASS : " + pass);
+        System.out.printf("\nTOTAL FAIL : " +fail);
 
         System.out.printf("\nEnter Student Name to search : ");
         String search = sc.nextLine();
@@ -80,6 +91,7 @@ public class StudentMarkSystem{
                 System.out.printf(student[i] + " scored " + marks[i]);
             }
         }
+        
         sc.close();
     }
 }
